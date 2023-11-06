@@ -20,3 +20,7 @@ most important part. Add your answer to this markdown file.
 
 Implement a function to convert an adjacency list to an adjacency matrix and
 analyze it as above.
+
+##Answer 
+
+The outer loops runs for each vertex, and there are $x$ number of vertices in the graph. Inside the outer loop, there is an inner loop that also runs for each vertex, and there is also $x$ vertices. Within the inner loop there is a check, $adjMatrix[i][j]$ is equal to $1$: this is a constant time operation. If $adjMatrix[i][j]$ is equal to $1$, then the vertex $j$ is pushed to the adjacency list: this is also a constant time operation. Therefore, for each pair of vertices $(i,j)$, there is a constant amount of work. Since there is $x$ vertices that iterate over all possible pairs of vertices, the total work done is, $x * x$ or $x^2$. This gives a runtime of $O(x^2)$, where x is the number of vertices in the graph. This means worst case runtime, $\Theta$ $(n^2)$. This would mean you iterate over all possible pairs of vertices in the adjacency matrix. 
